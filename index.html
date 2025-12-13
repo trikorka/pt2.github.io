@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авион</title>
     <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header class="header">
         <nav class="header__nav nav">
-            <div class="nav-block">
+            <div class="nav-block__buttons">
                 <button class="nav-block__button button">
                     <img src="./assets/icons/Search.png" alt="Кнопка поиска" class="button-icon">
                 </button>
@@ -17,35 +18,38 @@
                 <a href="#" class="nav-block__logo">
                     <img src="./assets/img/logo.png" alt="Логотип" class="nav-block__logo-icon">
                 </a>
+                <div class="nav-block__end-buttons">
+                    <button class="nav-block__button button">
+                        <img src="./assets/icons/Shopping--cart.png" alt="Кнопка корзины" class="button-icon">
+                    </button>
 
-                <button class="nav-block__button button">
-                    <img src="./assets/icons/Shopping--cart.png" alt="Кнопка корзины" class="button-icon">
-                </button>
-
-                <button class="nav-block__button button">
-                    <img src="./assets/icons/User--avatar.png" alt="account button" class="button-icon">
-                </button>
+                    <button class="nav-block__button button">
+                        <img src="./assets/icons/User--avatar.png" alt="account button" class="button-icon">
+                    </button>
+                </div>
             </div>
 
             <div class="nav-block">
                 <ul class="nav-block__list">
-                    <li class="nav-block__list-item"><a href="#" class="nav-block__list-link">Цветочные горшки</a></li>
-                    <li class="nav-block__list-item"><a href="#" class="nav-block__list-link">Керамика</a></li>
-                    <li class="nav-block__list-item"><a href="#" class="nav-block__list-link">Столы</a></li>
-                    <li class="nav-block__list-item"><a href="#" class="nav-block__list-link">Стулья</a></li>
-                    <li class="nav-block__list-item"><a href="#" class="nav-block__list-link">Посуда</a></li>
-                    <li class="nav-block__list-item"><a href="#" class="nav-block__list-link">Кухонные принадлежности</a></li>
-                    <li class="nav-block__list-item"><a href="#" class="nav-block__list-link">Столовые Приборы</a></li>
+                    <li class="nav-block__list-item"><a href="#newCards" class="nav-block__list-link">Цветочные горшки</a></li>
+                    <li class="nav-block__list-item"><a href="#newCards" class="nav-block__list-link">Керамика</a></li>
+                    <li class="nav-block__list-item"><a href="#popularCards" class="nav-block__list-link">Столы</a></li>
+                    <li class="nav-block__list-item"><a href="#popularCards" class="nav-block__list-link">Стулья</a></li>
+                    <li class="nav-block__list-item"><a href="#newCards" class="nav-block__list-link">Посуда</a></li>
+                    <li class="nav-block__list-item"><a href="#newCards" class="nav-block__list-link">Кухонные принадлежности</a></li>
+                    <li class="nav-block__list-item"><a href="#popularCards" class="nav-block__list-link">Столовые приборы</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main class="main">
-        <section class="section-hero">
+        <section id="hero" class="section-hero">
             <div class="section-hero__left">
-                <h1 class="section-hero__title section-title">Мебель будущего с вечным дизайном</h1>
-                <button class="section-hero__button button button--dark">Показать коллекцию</button>
+                <div class="section-hero__texts">
+                    <h1 class="section-hero__title section-title">Мебель будущего с вечным дизайном</h1>
+                    <button class="section-hero__button button button--dark">Показать коллекцию</button>
+                </div>
                 <p class="section-hero__text section-text">
                     Задача организации, в&nbsp;особенности&nbsp;же постоянный количественный рост и&nbsp;сфера нашей активности позволяет выполнять важные задания по&nbsp;разработке направлений прогрессивного развития.
                 </p>
@@ -55,36 +59,36 @@
             </div>
         </section>
 
-        <section class="section-advantages">
-            <h2 class="secton-advantages__title section-title">Что делает наш бренд особенным</h2>
+        <section id="advantages" class="section-advantages">
+            <h2 class="section-advantages__title section-title">Что делает наш бренд особенным</h2>
             <ul class="section-advantages__list">
                 <li class="section-advantages__item">
                     <img src="./assets/icons/Delivery.png" alt="Иконка доставки" class="section-advantages__item-icon">
-                    <h3 class="sectioin-advantages__item-title">Доставка на следующий день</h3>
+                    <h3 class="section-advantages__item-title">Доставка на следующий день</h3>
                     <p class="section-advantages__item-text">Заказывайте до 15:00 и мы доставим на следующий день</p>
                 </li>
 
                 <li class="section-advantages__item">
                     <img src="./assets/icons/Checkmark--outline.png" alt="Иконка-галочка" class="section-advantages__item-icon">
-                    <h3 class="sectioin-advantages__item-title">Сделано настоящими мастерами</h3>
+                    <h3 class="section-advantages__item-title">Сделано настоящими мастерами</h3>
                     <p class="section-advantages__item-text">Изделия ручной работы, сделанные с любовью</p>
                 </li>
 
                 <li class="section-advantages__item">
                     <img src="./assets/icons/Purchase.png" alt="Иконка покупки" class="section-advantages__item-icon">
-                    <h3 class="sectioin-advantages__item-title">Непревзайденные цены</h3>
+                    <h3 class="section-advantages__item-title">Непревзайденные цены</h3>
                     <p class="section-advantages__item-text">Покупайте товары из качественных материалов по выгодной цене</p>
                 </li>
 
                 <li class="section-advantages__item">
                     <img src="./assets/icons/Sprout.png" alt="Иконка растения" class="section-advantages__item-icon">
-                    <h3 class="sectioin-advantages__item-title">Переработанная упаковка</h3>
+                    <h3 class="section-advantages__item-title">Переработанная упаковка</h3>
                     <p class="section-advantages__item-text">Мы используем полностью переработанные упаковки для уменьшения воздействия на окружающую среду</p>
                 </li>
             </ul>
         </section>
 
-        <section class="section-cards cards-new">
+        <section id="newCards" class="section-cards cards-new">
             <h2 class="section-cards__title section-title">Новая керамика</h2>
             <ul class="section-cards__list">
                 <li class="section-cards__item">
@@ -94,7 +98,7 @@
                 </li>
 
                 <li class="section-cards__item">
-                    <img src="./assets/img/Photo4.webp" alt="Изображение набора деревенских ваз" class="section-cards__img">
+                    <img src="./assets/img/Photo4.png" alt="Изображение набора деревенских ваз" class="section-cards__img">
                     <h3 class="section-cards__title">Набор деревенских ваз</h3>
                     <span class="section-cards__price">£155</span>
                 </li>
@@ -114,7 +118,7 @@
             <button class="section-cards__button button button--light">Показать коллекцию</button>
         </section>
 
-        <section class="section-cards cards-popular">
+        <section id="popularCards" class="section-cards cards-popular">
             <h2 class="section-cards__title section-title">Наши популярные продукты</h2>
             <ul class="section-cards__list">
                 <li class="section-cards__item">
@@ -138,22 +142,27 @@
             <button class="section-cards__button button button--light">Показать коллекцию</button>
         </section>
 
-        <section class="section-form">
-            <h2 class="section-form__title section-title">Вступайте в клуб и получай преимущества</h2>
-            <p class="section-form__text">Подписывайтесь на&nbsp;нашу рассылку и&nbsp;получайте эксклюзивные предложения на&nbsp;наш новый ассортимент, распродажи, временные акции и&nbsp;многое другое</p>
-            <form class="section-form__form" action="#" method="post" target="_blank">
-                <input type="email" class="section-form__input" id="email" name="email" placeholder="your@email.com">
-                <button type="submit" class="section-form__button button button--blue">Подписаться</button>
-            </form>
+        <section id="form" class="section-form">
+            <div class="section-form__fill">
+                <h2 class="section-form__title section-title">Вступайте в клуб и получай преимущества</h2>
+                <p class="section-form__text">Подписывайтесь на&nbsp;нашу рассылку и&nbsp;получайте эксклюзивные предложения на&nbsp;наш новый ассортимент, распродажи, временные акции и&nbsp;многое другое</p>
+                <form class="section-form__form" action="#" method="post" target="_blank">
+                    <input type="email" class="section-form__input" id="email" name="email" placeholder="your@email.com">
+                    <button type="submit" class="section-form__button button button--blue">Подписаться</button>
+                </form>
+            </div>
         </section>
 
-        <section class="section-about">
-            <h2 class="section-about__title section-title">От студии в Лондоне до мирового бренда с более 400 магазинами</h2>
+        <section id="about" class="section-about">
+            <h2 class="section-about__title section-title visually-hidden">От студии в Лондоне до мирового бренда с более 400 магазинами</h2>
             <div class="section-about__fill">
-                <h2 class="section-about__title section-title">От студии в Лондоне до мирового бренда с более 400 магазинами</h2>
-                <p class="section-about__text">Когда мы&nbsp;основали Avion, идея была проста: сделать высококачественную мебель доступной для массового рынка.</p>
-                <p class="section-about__text">Изготовленная вручную и&nbsp;с&nbsp;любовью мебель и&nbsp;товары для дома&nbsp;&mdash; это&nbsp;то, чем мы&nbsp;живём, дышим и&nbsp;чем занимаемся, поэтому наш бутик в&nbsp;Челси стал центром лондонского сообщества дизайнеров интерьера.</p>
-                <button class="section-about__button button button-light">Связаться с нами</button>
+                <div class="section-about__fill-text">
+                    <h2 class="section-about__title section-title">От студии в Лондоне до мирового бренда с более 400 магазинами</h2>
+                    <p class="section-about__text">Когда мы&nbsp;основали Avion, идея была проста: сделать высококачественную мебель доступной для массового рынка.</p>
+                    <p class="section-about__text">Изготовленная вручную и&nbsp;с&nbsp;любовью мебель и&nbsp;товары для дома&nbsp;&mdash; это&nbsp;то, чем мы&nbsp;живём, дышим и&nbsp;чем занимаемся, поэтому наш бутик в&nbsp;Челси стал центром лондонского сообщества дизайнеров интерьера.</p>
+                </div>
+                
+                <button class="section-about__button button button--light">Связаться с нами</button>
             </div>
 
             <img src="./assets/img/Image.png" alt="" class="section-about__img">
@@ -167,41 +176,43 @@
                 <div class="footer__nav-category">
                     <h2 class="footer__title">Меню</h2>
                     <ul class="footer__nav-list">
-                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Новые поступления</a></li>
-                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Самые продоваемые</a></li>
-                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Недавно просмотренные</a></li>
-                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Популярно на этой неделе</a></li>
-                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Все продукты</a></li>
+                        <li class="footer__nav-item"><a href="#newCards" class="footer__nav-link">Новые поступления</a></li>
+                        <li class="footer__nav-item"><a href="#popularCards" class="footer__nav-link">Самые продоваемые</a></li>
+                        <li class="footer__nav-item"><a href="#newCards" class="footer__nav-link">Недавно просмотренные</a></li>
+                        <li class="footer__nav-item"><a href="#popularCards" class="footer__nav-link">Популярно на этой неделе</a></li>
+                        <li class="footer__nav-item"><a href="#popularCards" class="footer__nav-link">Все продукты</a></li>
                     </ul>
                 </div>
 
                 <div class="footer__nav-category">
                     <h2 class="footer__title">Категории</h2>
                     <ul class="footer__nav-list">
-                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Посуда</a></li>
-                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Мебель</a></li>
-                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Товары для дома</a></li>
-                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Цветочные горшки</a></li>
-                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Стулья</a></li>
+                        <li class="footer__nav-item"><a href="#newCards" class="footer__nav-link">Посуда</a></li>
+                        <li class="footer__nav-item"><a href="#popularCards" class="footer__nav-link">Мебель</a></li>
+                        <li class="footer__nav-item"><a href="#newCards" class="footer__nav-link">Товары для дома</a></li>
+                        <li class="footer__nav-item"><a href="#popularCards" class="footer__nav-link">Цветочные горшки</a></li>
+                        <li class="footer__nav-item"><a href="#newCards" class="footer__nav-link">Стулья</a></li>
                     </ul>
                 </div>
 
                 <div class="footer__nav-category">
                     <h2 class="footer__title">Наша компания</h2>
                     <ul class="footer__nav-list">
-                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">О нас</a></li>
+                        <li class="footer__nav-item"><a href="#about" class="footer__nav-link">О нас</a></li>
                         <li class="footer__nav-item"><a href="#" class="footer__nav-link">Вакансии</a></li>
-                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Связаться с нами</a></li>
+                        <li class="footer__nav-item"><a href="#hero" class="footer__nav-link">Связаться с нами</a></li>
                         <li class="footer__nav-item"><a href="#" class="footer__nav-link">Политика конфиденциальности</a></li>
-                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Возврат товаров</a></li>
+                        <li class="footer__nav-item"><a href="#form" class="footer__nav-link">Возврат товаров</a></li>
                     </ul>
                 </div>
             </nav>
 
             <form class="footer__form" action="#" method="post" target="_blank">
                 <label for="footeremail" class="footer__form-label">Подпишитесь на нашу рассылку</label>
-                <input type="email" class="footer__form-input" id="footeremail" name="footeremail" placeholder="your@email.com">
-                <button type="submit" class="footer__form-button button button--whie">Подписаться</button>
+                <div class="footer__form-fill">
+                    <input type="email" class="footer__form-input" id="footeremail" name="footeremail" placeholder="your@email.com">
+                    <button type="submit" class="footer__form-button button button--white">Подписаться</button>
+                </div>
             </form>
         </div>
 
@@ -209,15 +220,27 @@
             <span class="footer__copyright">Copyright 2022 Авион LTD</span>
             <ul class="footer__socials">
                 <li class="footer__socials-items">
-                    <a href="#" class="footer__socials-link"><img src="./assets/icons/Logo--linkedin.png" alt="Иконка linkedin" class="footer__socials-img"></a>
+                    <a href="#" class="footer__socials-link"><img src="./assets/icons/telegramlogo.svg" alt="Иконка telegram" class="footer__socials-img"></a>
                 </li>
 
                 <li class="footer__socials-items">
-                    <a href="#" class="footer__socials-link"><img src="./assets/icons/Logo--skype.png" alt="Иконка skype" class="footer__socials-img"></a>
+                    <a href="#" class="footer__socials-link"><img src="./assets/icons/pinterestlogo.svg" alt="Иконка pinterest" class="footer__socials-img"></a>
                 </li>
 
                 <li class="footer__socials-items">
-                    <a href="#" class="footer__socials-link"><img src="./assets/icons/Logo--pinterest.png" alt="Иконка Pinterest" class="footer__socials-img"></a>
+                    <a href="#" class="footer__socials-link"><img src="./assets/icons/oklogo.svg" alt="Иконка одноклассники" class="footer__socials-img"></a>
+                </li>
+
+                <li class="footer__socials-items">
+                    <a href="#" class="footer__socials-link"><img src="./assets/icons/vklogo.svg" alt="Иконка вконтакте" class="footer__socials-img"></a>
+                </li>
+
+                <li class="footer__socials-items">
+                    <a href="#" class="footer__socials-link"><img src="./assets/icons/githublogo.svg" alt="Иконка github" class="footer__socials-img"></a>
+                </li>
+
+                <li class="footer__socials-items">
+                    <a href="#" class="footer__socials-link"><img src="./assets/icons/dzenlogo.svg" alt="Иконка дзен" class="footer__socials-img"></a>
                 </li>
             </ul>
         </div>
