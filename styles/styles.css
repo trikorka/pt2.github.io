@@ -74,6 +74,7 @@ a:hover {
 
 .section-title {
     font-size: 36px;
+    text-align: center;
 }
 
 .button {
@@ -165,8 +166,8 @@ a:hover {
     margin-bottom: 40px;
 }
 
-.section-hero__right {
-    min-width: 500px;
+.section-hero__img {
+    min-width: 600px;
 }
 
 .section-hero__img {
@@ -174,27 +175,31 @@ a:hover {
     height: 100%;
 }
 
-
 .section-advantages__title {
     text-align: center;
     margin-bottom: 40px;
 }
 
 .section-advantages__list {
-    margin-right: 40px;
-    margin-left: 40px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .section-advantages__item {
-    width: 25%;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: var(--system-light-color);
+    border-radius: 10px;
+}
+
+.section-advantages__item-title {
+    font-weight: 700;
 }
 
 .section-advantages__item-icon, .section-advantages__item-title {
     margin-bottom: 20px;
 }
-
 
 .section-cards__button {
     margin: 0 auto;
@@ -202,14 +207,15 @@ a:hover {
 
 .section-cards__list {
     margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 40px;
+    column-count: 4;
+    padding: 0 10px;
 }
 
 .section-cards__item {
-    height: 25%;
+    display: inline-block;
+    max-width: 300px;
+    margin-bottom: 16px;  
+    transition: transform 0.3s ease;
 }
 
 .section-cards__img {
@@ -268,7 +274,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 60px 60px 60px 0;
+    padding: 60px 60px 60px 10px;
 }
 
 .section-about__img {
@@ -350,4 +356,90 @@ a:hover {
 .footer__socials {
     display: flex;
     gap: 10px;
+}
+
+/* медиазапросы */
+
+@media (max-width: 1023px) {
+    .nav-block__list {
+        flex-wrap: wrap;
+    }
+
+    .section-hero {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .section-hero__img {
+        min-width: 100px;
+    }
+
+    .section-hero__button {
+        margin-bottom: 14px;
+    }
+
+    .section-advantages__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-cards__list {
+        column-count: 3;
+    }
+
+    .section-about {
+        flex-direction: column;
+    }
+
+    .section-about__fill, .section-about__title {
+        padding: 20px;
+    }
+
+    .section-about__img {
+        width: 100%;
+    }
+
+    .footer__top {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-block__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-advantages__list {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-cards__list {
+        column-count: 2;
+    }
+
+    .footer__nav {
+        justify-content: start;
+        column-gap: 80px;
+        flex-wrap: wrap;
+    }
+
+    .footer__form {
+        width: 100%;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 374px) {
+    .section-title {
+        font-size: 24px;
+    }
 }
