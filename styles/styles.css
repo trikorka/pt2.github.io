@@ -147,6 +147,27 @@ a:hover {
     color: var(--border-dark-color)
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    padding: 12px 10px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle__line {
+    width: 100%;
+    height: 1px;
+    background: var(--system-dark-color);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
 .section-hero {
     margin-right: 40px;
     margin-left: 40px;
@@ -358,6 +379,44 @@ a:hover {
     gap: 10px;
 }
 
+/* скролл наверх */
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background: var(--system-dark-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background: var(--system-primary-color);
+    transform: scale(1.1);
+}
+
+.scroll-top:active {
+    transform: scale(0.95);
+}
+
 /* медиазапросы */
 
 @media (max-width: 1023px) {
@@ -404,6 +463,36 @@ a:hover {
 }
 
 @media (max-width: 767px) {
+    .header {
+        position: sticky;
+        top: 0;
+        background-color: var(--system-white-color);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-block__button {
+        display: none;
+    }
+
+    .nav-block {
+        display: block;
+        position: absolute;
+        height: 100vh;
+        left: 0;
+        right: 0;
+        top: 100%;
+        max-height: 0;
+        overflow: hidden;
+        background: var(--system-white-color);
+        z-index: 1000;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: max-height 300ms ease, opacity 200ms ease, transform 200ms ease;
+    }
+
     .nav-block__list {
         flex-direction: column;
         align-items: center;
@@ -435,6 +524,27 @@ a:hover {
         flex-direction: column;
         gap: 10px;
         align-items: center;
+    }
+
+    .nav-block.nav-block--open {
+        max-height: calc(100vh - 64px);
+        opacity: 1;
+        transform: translateY(0);
+        padding: 16px 0;
+    }
+
+    .nav-block.nav-block--open .nav-block__list {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .scroll-top {
+        width: 52px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 22px;
     }
 }
 
